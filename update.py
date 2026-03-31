@@ -173,6 +173,9 @@ def run_command(cmd, description):
 
 def main():
     print(f"{CYAN}{BOLD}\n🚀 System Update Automation Script{RESET}\n")
+    username = os.getlogin()
+    print(f"{GREEN}{BOLD}Hello {username}")
+
 
     os_type, distro_id, distro_like = detect_platform()
 
