@@ -8,7 +8,8 @@ import sys
 import time
 import threading
 
-# ===== COLORS =====
+# ===== Colors =====
+
 RESET = "\033[0m"
 BOLD = "\033[1m"
 
@@ -18,7 +19,8 @@ YELLOW = "\033[33m"
 CYAN = "\033[36m"
 MAGENTA = "\033[35m"
 
-# ===== SPINNER =====
+# ===== Spinner =====
+
 spinner_running = False
 
 def spinner():
@@ -43,7 +45,7 @@ def stop_spinner(thread):
     sys.stdout.write("\r")  # clear line
 
 
-# ===== ORIGINAL FUNCTIONS (UNCHANGED LOGIC) =====
+# ===== Functions =====
 
 def read_os_release(path="/etc/os-release"):
     metadata = {}
@@ -151,7 +153,7 @@ def get_update_commands():
     raise RuntimeError("Unsupported OS")
 
 
-# ===== ENHANCED OUTPUT =====
+# ===== Enhanced output  =====
 
 def run_command(cmd, description):
     print(f"\n{MAGENTA}{'='*60}{RESET}")
