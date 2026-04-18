@@ -7,6 +7,7 @@ import subprocess
 import sys
 import time
 import threading
+import getpass
 
 # ===== Colors =====
 
@@ -175,7 +176,7 @@ def run_command(cmd, description):
 
 def main():
     print(f"{CYAN}{BOLD}\n🚀 System Update Automation Script{RESET}\n")
-    username = os.getlogin()
+    username = getpass.getuser()
     print(f"{GREEN}{BOLD}Hello {username}")
 
 
